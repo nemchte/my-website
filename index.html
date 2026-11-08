@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://yosukewanibuchi.com/">
   <title>Yosuke Wanibuchi</title>
+
   <style>
     body {
       max-width: 760px;
@@ -14,33 +15,48 @@
       color: #222;
       line-height: 1.6;
     }
-    h1 { 
-      font-size: 2.4rem; 
+
+    h1 {
+      font-size: 2.4rem;
       font-weight: 500;
       line-height: 1.3;
       margin-bottom: 0;
     }
 
     header p {
-  　　margin-top: 0;
-　　　}
+      margin-top: 0;
+    }
 
     h2 {
-  margin-bottom: 0.2em;
-}
-
-h2 + p {
-  margin-top: 0;
-}
-    
-    nav { margin: 40px 0; }
-    nav a { margin-right: 20px; color: #555; }
-    a { color: #555; }
-    footer {
-      margin-top: 100px;
-      color: #888;
-      font-size: 0.85rem;
+      margin-bottom: 0.2em;
     }
+
+    h2 + p {
+      margin-top: 0;
+    }
+
+    nav {
+      margin: 40px 0;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: #555;
+    }
+
+    a {
+      color: #555;
+    }
+
+    .video-item {
+      margin-bottom: 40px;
+    }
+
+    .video-info {
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+
     .video {
       width: 100%;
       max-width: 560px;
@@ -53,94 +69,96 @@ h2 + p {
       height: 100%;
       border: 0;
     }
+
+    .archive-link {
+      margin-top: 40px;
+    }
+
+    footer {
+      margin-top: 100px;
+      color: #888;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Yosuke Wanibuchi</h1>
     <p>鰐渕陽介</p>
   </header>
 
   <main>
+
     <section id="about">
       <h2>誰？ここは何？</h2>
-      <p>打楽器奏者です<br>
-      練習の記録を残していきます<br>
-      週一の更新を目標にしています</p>
+      <p>
+        打楽器奏者です<br>
+        練習の記録を残していきます<br>
+        週一の更新を目標にしています
+      </p>
+    </section>
+
+    <section id="latest">
+      <h2>Latest Videos</h2>
+
+      <div class="video-item">
+        <div class="video-info">
+          2026/11/9更新<br>
+          編曲の練習<br>
+          Here, There and Everywhere (The Beatles)<br>
+          IntroとVerseのみ
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/cJg3PPCYExc"
+            title="Here, There and Everywhere"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="video-item">
+        <div class="video-info">
+          2026/11/2更新<br>
+          Caleidoscópio by Gene Koshinski
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/n8TBfj2AyU8"
+            title="Caleidoscópio"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="video-item">
+        <div class="video-info">
+          2026/10/26更新<br>
+          Wynton Kelly - Temperance<br>
+          Philly Joe Jonesのコピー
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/FHB3v6j4FQo"
+            title="Temperance"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <p class="archive-link">
+        <a href="videos.html">View All Videos →</a>
+      </p>
+
     </section>
 
   </main>
 
-  <p style="font-size: 0.85rem;　margin-bottom: 32px;">
-  2026/11/9更新<br>
-  編曲の練習<br>
-  Here, There and Everywhere(The Beatles)<br>
-  IntroとVerseのみ  
-  <div class="video">
-  <iframe
-  src="https://www.youtube.com/embed/cJg3PPCYExc?si=iigEMcwRsKStlZ_k" 
-  title="Temperance" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>  
-  </div>
-
-  <p style="font-size: 0.85rem;　margin-bottom: 32px;">
-  2026/11/2更新<br>
-  Caleidoscópio by Gene Koshinski
-  <div class="video">
-  <iframe
-  src="https://www.youtube.com/embed/n8TBfj2AyU8?si=duJtZ1IHrhyEvekk" 
-  title="Temperance" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>  
-  </div>
-  
-  <p style="font-size: 0.85rem;　margin-bottom: 32px;">
-  2026/10/26更新<br>
-  Wynton Kelly - Temperance<br>
-  Philly Joe Jonesのコピー
-  <div class="video">
-  <iframe
-  src="https://www.youtube.com/embed/FHB3v6j4FQo?si=dWdNqgjPDo3DrELC" 
-  title="Temperance" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>  
-  </div>
-  
-  <p style="font-size: 0.85rem;　margin-bottom: 32px;">
-  2026/10/19更新<br>
-  Afternoon in March by Gene Koshinski
-  <div class="video">
-<iframe
-  src="https://www.youtube.com/embed/VzVeiryLlWo?si=RXvIqf0dS2v_RHN7" 
-  title="Afternoon in March - Gene Koshinski" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>  
-  </div>
-
-  <p style="font-size: 0.85rem;">
-  2026/10/12更新<br>
-  Hank Mobley - Old World, New Imports<br>
-  Philly Joe Jonesのコピー</p>
-  <div class="video">
-<iframe
-  src="https://www.youtube.com/embed/FJVI62eKecg?si=NYE5sg-uW1oLAb4j" 
-  title="YouTube video player" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>  
-  </div>
   <footer>
     © Yosuke Wanibuchi
   </footer>
+
 </body>
 </html>

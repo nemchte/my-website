@@ -24,6 +24,33 @@
       color: #555;
     }
 
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 32px;
+    }
+
+    .filter-label {
+      display: inline-block;
+      padding: 5px 14px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    .filter-label:has(input:checked) {
+      background: #333;
+      color: white;
+      border-color: #333;
+    }
+
+    .filter-label input {
+      display: none;
+    }
+
     .video-item {
       margin-bottom: 48px;
     }
@@ -31,6 +58,11 @@
     .video-info {
       font-size: 0.85rem;
       margin-bottom: 12px;
+    }
+
+    .video-tags {
+      margin-top: 5px;
+      color: #777;
     }
 
     .video {
@@ -44,6 +76,10 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .no-results {
+      color: #888;
     }
 
     footer {
@@ -65,83 +101,140 @@
 
     <h2>2026</h2>
 
-    <div class="video-item">
-        <div class="video-info">
-          2026/11/16更新<br>
-          編曲の練習<br>
-          Here, There and Everywhere (The Beatles)<br>
-          Bメロ
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/NX9sxsl2qOQ?si=nY316cqtxgqi1UJP"
-            title="Here, There and Everywhere"
-            allowfullscreen>
-          </iframe>
-        </div>
+    <!-- タグ選択 -->
+    <div class="filters">
+
+      <label class="filter-label">
+        <input type="checkbox" value="marimba" checked>
+        #マリンバ
+      </label>
+
+      <label class="filter-label">
+        <input type="checkbox" value="drums" checked>
+        #ドラム
+      </label>
+
+      <label class="filter-label">
+        <input type="checkbox" value="vibraphone" checked>
+        #ビブラフォン
+      </label>
+
+      <label class="filter-label">
+        <input type="checkbox" value="arrangement" checked>
+        #編曲
+      </label>
+
+    </div>
+
+    <p id="no-results" class="no-results" hidden>
+      該当する動画はありません。
+    </p>
+
+    <!-- 2026/11/16 -->
+    <div class="video-item" data-tags="arrangement">
+      <div class="video-info">
+        2026/11/16更新<br>
+        編曲の練習<br>
+        Here, There and Everywhere (The Beatles)<br>
+        Bメロ
+        <div class="video-tags">#編曲</div>
       </div>
 
-    <div class="video-item">
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/NX9sxsl2qOQ"
+          title="Here, There and Everywhere"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- 2026/11/9 -->
+    <div class="video-item" data-tags="arrangement">
       <div class="video-info">
         2026/11/9更新<br>
         編曲の練習<br>
         Here, There and Everywhere (The Beatles)<br>
         IntroとVerseのみ
+        <div class="video-tags">#編曲</div>
       </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/cJg3PPCYExc"
+        <iframe
+          src="https://www.youtube.com/embed/cJg3PPCYExc"
           title="Here, There and Everywhere"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
-    <div class="video-item">
+    <!-- 2026/11/2 -->
+    <div class="video-item" data-tags="marimba">
       <div class="video-info">
         2026/11/2更新<br>
         Caleidoscópio by Gene Koshinski
+        <div class="video-tags">#マリンバ</div>
       </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/n8TBfj2AyU8"
+        <iframe
+          src="https://www.youtube.com/embed/n8TBfj2AyU8"
           title="Caleidoscópio"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
-    <div class="video-item">
+    <!-- 2026/10/26 -->
+    <div class="video-item" data-tags="drums">
       <div class="video-info">
         2026/10/26更新<br>
         Wynton Kelly - Temperance<br>
         Philly Joe Jonesのコピー
+        <div class="video-tags">#ドラム</div>
       </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/FHB3v6j4FQo"
+        <iframe
+          src="https://www.youtube.com/embed/FHB3v6j4FQo"
           title="Temperance"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
-    <div class="video-item">
+    <!-- 2026/10/19 -->
+    <div class="video-item" data-tags="marimba">
       <div class="video-info">
         2026/10/19更新<br>
         Afternoon in March by Gene Koshinski
+        <div class="video-tags">#マリンバ</div>
       </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/VzVeiryLlWo"
+        <iframe
+          src="https://www.youtube.com/embed/VzVeiryLlWo"
           title="Afternoon in March"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
-    <div class="video-item">
+    <!-- 2026/10/12 -->
+    <div class="video-item" data-tags="drums">
       <div class="video-info">
         2026/10/12更新<br>
         Hank Mobley - Old World, New Imports<br>
         Philly Joe Jonesのコピー
+        <div class="video-tags">#ドラム</div>
       </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/FJVI62eKecg"
+        <iframe
+          src="https://www.youtube.com/embed/FJVI62eKecg"
           title="Old World, New Imports"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
@@ -150,6 +243,40 @@
   <footer>
     © Yosuke Wanibuchi
   </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll(
+      '.filters input[type="checkbox"]'
+    );
+
+    const videos = document.querySelectorAll('.video-item');
+    const noResults = document.getElementById('no-results');
+
+    function filterVideos() {
+      const selected = [...checkboxes]
+        .filter(box => box.checked)
+        .map(box => box.value);
+
+      let count = 0;
+
+      videos.forEach(video => {
+        const tags = video.dataset.tags.split(' ');
+        const show = selected.some(tag => tags.includes(tag));
+
+        video.hidden = !show;
+
+        if (show) count++;
+      });
+
+      noResults.hidden = count !== 0;
+    }
+
+    checkboxes.forEach(box => {
+      box.addEventListener('change', filterVideos);
+    });
+
+    filterVideos();
+  </script>
 
 </body>
 </html>
